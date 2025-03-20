@@ -1,8 +1,6 @@
 import {Component} from 'react'
 import './App.css'
 
-// 1. **Define the available colors**
-// The game will use these colors for the falling balls.
 const colors = ['blue', 'green', 'red', 'pink', 'yellow', 'orange']
 
 class App extends Component {
@@ -12,10 +10,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // 2. **Start intervals for adding new balls and moving them down**
-    // We need two intervals here:
-    //  - One to add new balls every second
-    //  - One to move the balls down every 300ms
     this.ballInterval = setInterval(() => {
       this.addNewBall()
     }, 1000)
@@ -54,12 +48,9 @@ class App extends Component {
 
   // 5. **Function to handle clicking (catching) a ball**
   catchBall = id => {
-    // When a ball is clicked:
-    // - Remove the clicked ball from the list
-    // - Increase the score
     this.setState(prevState => ({
-      balls: prevState.balls.filter(ball => ball.id !== id), // Remove clicked ball
-      score: prevState.score + 1, // Increase score
+      balls: prevState.balls.filter(ball => ball.id !== id),
+      score: prevState.score + 1,
     }))
   }
 
