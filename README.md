@@ -1,4 +1,4 @@
-In this project, let's build a **Fruits Counter** by applying the concepts we have learned till now.
+In this project, let's build a **Holi Challenge** .
 
 ### Refer to the image below:
 
